@@ -20,8 +20,18 @@ const toastAnimation = cssTransition({
 export const links: LinksFunction = () => [
   {
     rel: 'icon',
-    href: '/aik-logo.png',
+    href: '/aik-logo.png?v=2',
     type: 'image/png',
+    sizes: 'any',
+  },
+  {
+    rel: 'shortcut icon',
+    href: '/aik-logo.png?v=2',
+    type: 'image/png',
+  },
+  {
+    rel: 'apple-touch-icon',
+    href: '/aik-logo.png?v=2',
   },
   { rel: 'stylesheet', href: reactToastifyStyles },
   { rel: 'stylesheet', href: tailwindReset },
