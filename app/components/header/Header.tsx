@@ -18,7 +18,9 @@ export function Header() {
       <div className="flex items-center gap-2 z-logo text-bolt-elements-textPrimary cursor-pointer">
         <div className="i-ph:sidebar-simple-duotone text-xl" />
         <a href="/" className="flex items-center gap-2" aria-label="AIK home">
-          <img src="/aik-logo.png" alt="AIK" className="h-7 w-7 rounded-lg object-contain" />
+          <span className="h-7 w-7 overflow-hidden rounded-lg" aria-hidden="true">
+            <img src="/aik-brand.png" alt="" className="h-full w-[220%] max-w-none object-cover object-[32%_center]" />
+          </span>
           <span className="text-2xl font-semibold text-accent">AIK</span>
         </a>
       </div>

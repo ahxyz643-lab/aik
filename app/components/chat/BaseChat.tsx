@@ -384,8 +384,13 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
         <div className="flex flex-col lg:flex-row overflow-y-auto w-full h-full">
           <div className={classNames(styles.Chat, 'flex flex-col flex-grow lg:min-w-[var(--chat-min-width)] h-full')}>
             {!chatStarted && (
-              <div id="intro" className="mt-[16vh] max-w-2xl mx-auto text-center px-4 lg:px-0">
-                <h1 className="text-3xl lg:text-6xl font-bold text-bolt-elements-textPrimary mb-4 animate-fade-in">
+<div id="intro" className="mt-[12vh] max-w-2xl mx-auto text-center px-4 lg:px-0">
+            <img
+              src="/aik-brand.png"
+              alt="AIK"
+              className="mx-auto mb-8 h-auto w-[min(360px,72vw)] object-contain animate-fade-in"
+            />
+            <h1 className="text-3xl lg:text-6xl font-bold text-bolt-elements-textPrimary mb-4 animate-fade-in">
                   Where ideas begin
                 </h1>
                 <p className="text-md lg:text-xl mb-8 text-bolt-elements-textSecondary animate-fade-in animation-delay-200">
