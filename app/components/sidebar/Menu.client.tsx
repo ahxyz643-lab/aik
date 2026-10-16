@@ -1,4 +1,3 @@
-import { useStore } from '@nanostores/react';
 import { motion, type Variants } from 'framer-motion';
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -20,7 +19,6 @@ import { SettingsButton, HelpButton } from '~/components/ui/SettingsButton';
 import { ThemeSwitch } from '~/components/ui/ThemeSwitch';
 import { useSearchFilter } from '~/lib/hooks/useSearchFilter';
 import { db, deleteById, getAll, chatId, type ChatHistoryItem, useChatHistory } from '~/lib/persistence';
-import { DEFAULT_AVATAR, profileStore } from '~/lib/stores/profile';
 import { classNames } from '~/utils/classNames';
 import { cubicEasingFn } from '~/utils/easings';
 
@@ -79,7 +77,6 @@ export const Menu = () => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isDocumentationOpen, setIsDocumentationOpen] = useState(false);
   const [settingsInitialTab, setSettingsInitialTab] = useState<string | undefined>(undefined);
-  const profile = useStore(profileStore);
   const [selectionMode, setSelectionMode] = useState(false);
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
@@ -367,18 +364,6 @@ export const Menu = () => {
           <div className="text-bolt-elements-textPrimary font-medium"></div>
           <div className="flex items-center gap-3">
             <HelpButton onClick={() => setIsDocumentationOpen(true)} />
-            <span className="font-medium text-sm text-bolt-elements-textPrimary truncate">
-              {profile?.username || 'Guest User'}
-            </span>
-            <div className="flex items-center justify-center w-[32px] h-[32px] overflow-hidden bg-bolt-elements-background-depth-3 text-bolt-elements-textSecondary rounded-full shrink-0">
-              <img
-                src={profile?.avatar || DEFAULT_AVATAR}
-                alt={profile?.username || 'User'}
-                className="w-full h-full object-cover"
-                loading="eager"
-                decoding="sync"
-              />
-            </div>
           </div>
         </div>
         <CurrentDateTime />
