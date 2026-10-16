@@ -1,0 +1,1 @@
+var e=typeof navigator<`u`&&navigator.platform.toLowerCase().includes(`mac`),t=typeof navigator<`u`&&navigator.platform.toLowerCase().includes(`win`),n=typeof navigator<`u`&&navigator.platform.toLowerCase().includes(`linux`);export{e as n,t as r,n as t};

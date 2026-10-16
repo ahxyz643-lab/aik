@@ -1,4 +1,3 @@
-import { cloudflare } from '@cloudflare/vite-plugin';
 import { reactRouter } from '@react-router/dev/vite';
 import * as dotenv from 'dotenv';
 import UnoCSS from 'unocss/vite';
@@ -171,7 +170,6 @@ export default defineConfig((config) => {
        * package is CommonJS and exposes no named `Buffer` export.
        */
       browserPolyfills(),
-      config.mode !== 'test' && cloudflare({ viteEnvironment: { name: 'ssr' } }),
       config.mode !== 'test' && reactRouter(),
       UnoCSS(),
       chrome129IssuePlugin(),

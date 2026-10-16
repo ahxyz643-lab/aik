@@ -1,0 +1,1 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{t}from"./react-DiVRNtpo.js";var n=e(t(),1);function r(){return()=>{}}function i(){return(0,n.useSyncExternalStore)(r,()=>!0,()=>!1)}function a({children:e,fallback:t=null}){return i()?e():t}export{a as t};
