@@ -17,8 +17,9 @@ export function Header() {
     >
       <div className="flex items-center gap-2 z-logo text-bolt-elements-textPrimary cursor-pointer">
         <div className="i-ph:sidebar-simple-duotone text-xl" />
-        <a href="/" className="text-2xl font-semibold text-accent flex items-center" aria-label="AIK home">
-          AIK
+        <a href="/" className="flex items-center gap-2" aria-label="AIK home">
+          <img src="/aik-logo.png" alt="AIK" className="h-7 w-7 rounded-lg object-contain" />
+          <span className="text-2xl font-semibold text-accent">AIK</span>
         </a>
       </div>
       {chat.started && ( // Display ChatDescription and HeaderActionButtons only when the chat has started.
