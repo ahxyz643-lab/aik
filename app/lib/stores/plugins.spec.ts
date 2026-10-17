@@ -9,7 +9,7 @@ const manifest = pluginManifestSchema.parse({
   id: 'boltdiy.text-utilities',
   name: 'Text Utilities',
   description: 'Count and transform text.',
-  publisher: 'Bolt.diy',
+  publisher: 'AIK',
   license: 'MIT',
   category: 'Productivity',
   version: '1.1.0',

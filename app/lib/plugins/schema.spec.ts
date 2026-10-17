@@ -7,7 +7,7 @@ const manifest = {
   id: 'boltdiy.text-utilities',
   name: 'Text Utilities',
   description: 'Count and transform supplied text.',
-  publisher: 'Bolt.diy',
+  publisher: 'AIK',
   license: 'MIT',
   category: 'Productivity',
   version: '1.0.0',

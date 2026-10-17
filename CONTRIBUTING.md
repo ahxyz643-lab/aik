@@ -182,7 +182,7 @@ docker compose --profile development up
 #### Running the Development Container
 
 ```bash
-docker run -p 5173:5173 --env-file .env.local bolt-ai:development
+docker run -p 5173:5173 --env-file .env.local aik:development
 ```
 
 ---
@@ -213,7 +213,7 @@ docker compose --profile production up
 #### Running the Production Container
 
 ```bash
-docker run -p 5173:5173 --env-file .env.local bolt-ai:production
+docker run -p 5173:5173 --env-file .env.local aik:production
 ```
 
 ---
