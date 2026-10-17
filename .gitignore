@@ -9,6 +9,14 @@ __v0_jsx-dev-runtime.ts
 
 # Environment variables
 .env*.local
+.env.production
+.env.production.*
+!.env.example
+
+# Generated build and deployment state
+build/
+.react-router/types/
+.wrangler/state/
 
 # Common ignores
 node_modules

@@ -1,1 +1,0 @@
-import{n as e}from"./dist-gypmfChw.js";export{e as javascript};
