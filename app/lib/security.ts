@@ -110,10 +110,12 @@ export function getTrustedClientIP(request: Request, context?: unknown): string 
   }
 
   /*
-   * Only trust this header when an operator has configured a reverse proxy to
-   * overwrite it and blocked direct access to the application origin.
+   * Vercel sets x-real-ip at its edge and the deployed function is not directly
+   * reachable, so it is safe to use that platform-provided address there.
+   * Other reverse proxies must opt in explicitly; never trust arbitrary
+   * forwarded headers from an untrusted client.
    */
-  if (process.env.BUG_REPORT_TRUSTED_IP_HEADER === 'x-real-ip') {
+  if (process.env.VERCEL === '1' || process.env.BUG_REPORT_TRUSTED_IP_HEADER === 'x-real-ip') {
     return normalizeIpAddress(request.headers.get('x-real-ip'));
   }
 
