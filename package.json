@@ -7,8 +7,7 @@
   "type": "module",
   "version": "1.0.0",
   "author": {
-    "name": "bolt.diy team",
-    "email": "maintainers@bolt.diy"
+    "name": "AIK team"
   },
   "scripts": {
     "deploy": "pnpm run build && wrangler deploy",
@@ -35,9 +34,9 @@
     "lint:fix": "npm run lint -- --fix && prettier app --write",
     "start": "vite preview --host :: --port 5173 --strictPort",
     "dockerstart": "vite preview --host 0.0.0.0 --port 5173 --strictPort",
-    "dockerrun": "docker run -it -d --name bolt-ai-live -p 5173:5173 --env-file .env.local bolt-ai",
-    "dockerbuild:prod": "docker build -t bolt-ai:production -t bolt-ai:latest --target bolt-ai-production .",
-    "dockerbuild": "docker build -t bolt-ai:development -t bolt-ai:latest --target development .",
+    "dockerrun": "docker run -it -d --name aik-live -p 5173:5173 --env-file .env.local aik",
+    "dockerbuild:prod": "docker build -t aik:production -t aik:latest --target bolt-ai-production .",
+    "dockerbuild": "docker build -t aik:development -t aik:latest --target development .",
     "typecheck": "tsc",
     "update:ripgrep-wasm": "node scripts/update-ripgrep-wasm.mjs",
     "typegen": "wrangler types",

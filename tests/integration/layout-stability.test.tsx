@@ -332,7 +332,7 @@ describe('Layout Stability - Chrome Prerender Edge Case', () => {
     const { container, rerender } = render(
       <div style={{ height: `${initialHeight}px`, display: 'flex', flexDirection: 'column' }}>
         <div data-testid="greeting" style={{ marginTop: '18%' }}>
-          Welcome to Bolt
+          Welcome to AIK
         </div>
         <div style={{ flex: 1 }} />
         <div data-testid="composer" style={{ height: '76px' }}>
@@ -350,7 +350,7 @@ describe('Layout Stability - Chrome Prerender Edge Case', () => {
     rerender(
       <div style={{ height: `${finalHeight}px`, display: 'flex', flexDirection: 'column' }}>
         <div data-testid="greeting" style={{ marginTop: '18%' }}>
-          Welcome to Bolt
+          Welcome to AIK
         </div>
         <div style={{ flex: 1 }} />
         <div data-testid="composer" style={{ height: '76px' }}>
