@@ -1,8 +1,8 @@
-# bolt.diy
+# AIK
 
-[![bolt.diy: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index(1).jpg)](https://bolt.diy)
+[![AIK: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index(1).jpg)](https://github.com/ahxyz643-lab/aik)
 
-Welcome to **bolt.diy**, the open-source AI developer workspace that lets you select your preferred LLM for every prompt. Build full-stack web applications in the browser with support for 22+ model providers (OpenAI, Anthropic, Gemini, Groq, xAI, DeepSeek, Ollama, LM Studio, and more), or extend it with any provider supported by the Vercel AI SDK. OpenRouter, Anthropic, OpenAI, and Google are enabled by default; enable and configure other providers in Settings.
+Welcome to **AIK**, a customized commercial fork of [bolt.diy](https://github.com/stackblitz-labs/bolt.diy), the open-source AI developer workspace that lets you select your preferred LLM for every prompt. Build full-stack web applications in the browser with support for 22+ model providers (OpenAI, Anthropic, Gemini, Groq, xAI, DeepSeek, Ollama, LM Studio, and more), or extend it with any provider supported by the Vercel AI SDK. OpenRouter, Anthropic, OpenAI, and Google are enabled by default; enable and configure other providers in Settings.
 
 [Documentation](https://stackblitz-labs.github.io/bolt.diy/) | [Community Forum](https://thinktank.ottomator.ai) | [FAQ & Troubleshooting](FAQ.md)
 
@@ -13,6 +13,8 @@ Also [this pinned post in our community](https://thinktank.ottomator.ai/t/videos
 bolt.diy was originally started by [Cole Medin](https://www.youtube.com/@ColeMedin) but has quickly grown into a massive community effort to build the BEST open source AI coding assistant!
 
 ---
+
+AIK preserves the upstream MIT license and required third-party notices. WebContainers API commercial licensing is a separate requirement and must be confirmed with StackBlitz before monetizing a hosted version; this repository does not claim that clearance.
 
 ## Table of Contents
 

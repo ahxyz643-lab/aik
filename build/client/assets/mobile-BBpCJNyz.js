@@ -1,1 +1,0 @@
-function e(){return globalThis.innerWidth<640}export{e as t};

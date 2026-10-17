@@ -17,6 +17,11 @@ const toastAnimation = cssTransition({
   exit: 'animated fadeOutRight',
 });
 
+export const meta = () => [
+  { title: 'AIK' },
+  { name: 'description', content: 'AIK is an AI-powered development workspace.' },
+];
+
 export const links: LinksFunction = () => [
   {
     rel: 'icon',
