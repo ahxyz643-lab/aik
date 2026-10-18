@@ -5,8 +5,11 @@ declare global {
 }
 
 const requestHandler = createRequestHandler(
-  // The virtual module resolves to the generated server build; the cast bridges the
-  // ambient declaration in `types/` to the `ServerBuild` shape the handler expects.
+
+  /*
+   * The virtual module resolves to the generated server build; the cast bridges the
+   * ambient declaration in `types/` to the `ServerBuild` shape the handler expects.
+   */
   () => import('virtual:react-router/server-build') as unknown as Promise<ServerBuild>,
   import.meta.env.MODE,
 );
@@ -19,6 +22,17 @@ export default {
 
     context.cloudflare = { env, ctx };
 
-    return requestHandler(request, context);
+    const response = await requestHandler(request, context);
+    const headers = new Headers(response.headers);
+
+    // WebContainers transfer SharedArrayBuffer and require cross-origin isolation.
+    headers.set('Cross-Origin-Opener-Policy', 'same-origin');
+    headers.set('Cross-Origin-Embedder-Policy', 'credentialless');
+
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
   },
 } satisfies ExportedHandler<CloudflareEnvironment>;

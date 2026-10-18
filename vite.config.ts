@@ -151,6 +151,8 @@ export default defineConfig((config) => {
       },
     },
     plugins: [
+      crossOriginIsolationPlugin(),
+
       /*
        * Browser polyfills for `Buffer` / `process` / `global`.
        *
@@ -197,6 +199,19 @@ export default defineConfig((config) => {
      */
   };
 });
+
+function crossOriginIsolationPlugin() {
+  return {
+    name: 'cross-origin-isolation',
+    configureServer(server: ViteDevServer) {
+      server.middlewares.use((_req, res, next) => {
+        res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+        res.setHeader('Cross-Origin-Embedder-Policy', 'credentialless');
+        next();
+      });
+    },
+  };
+}
 
 function chrome129IssuePlugin() {
   return {
