@@ -66,7 +66,9 @@ export async function detectProjectCommands(files: FileContent[]): Promise<Proje
 
     const setupCommand = installCommands[packageManager] || installCommands.npm;
     const prefix = projectDirectory ? `cd ${JSON.stringify(projectDirectory)} && ` : '';
-    const startCommand = preferredScript ? `${prefix}${packageManager} run ${preferredScript}` : undefined;
+
+    /* WebContainer exposes preview servers through forwarded ports. Binding to localhost would keep the server inside the container and make the public preview unreachable, so provide the portable host setting at launch. */
+    const startCommand = preferredScript ? `${prefix}HOST=0.0.0.0 ${packageManager} run ${preferredScript}` : undefined;
 
     return {
       type: 'Node.js',
